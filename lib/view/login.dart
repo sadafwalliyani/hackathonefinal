@@ -39,7 +39,7 @@ class _LoginState extends State<Login> {
                 padding: const EdgeInsets.only(top:30,left: 8,right: 8),
                 child: Column(children: [
                   SizedBox(
-                    height: 50,
+                    height: 100,
                   ),
                   Container(
                     width: 390,
