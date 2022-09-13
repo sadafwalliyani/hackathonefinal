@@ -3,6 +3,7 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:hackfinal/view/progress.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -149,14 +150,16 @@ class _HomeState extends State<Home> {
                 SizedBox(
                   height: 20,
                 ),
-              Container(
-                        height: 150,
-                     //   width: 500,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            image: DecorationImage(
-                                image: AssetImage("assests/img.PNG"),
-                                fit: BoxFit.cover))),
+              // Container(
+              //           height: 150,
+              //        //   width: 500,
+              //           decoration: BoxDecoration(
+              //               borderRadius: BorderRadius.circular(20),
+              //               image: DecorationImage(
+              //                   image: AssetImage("assests/img.PNG"),
+              //                   fit: BoxFit.cover))),
+               Progress(Color.fromRGBO(46, 196, 182, 1),
+                    "Basic UI/UX Designer ", "by Azamat baimatov",context),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

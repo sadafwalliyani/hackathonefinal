@@ -3,6 +3,7 @@ import 'package:hackfinal/view/bottomnavigation/custom_animated_bottom_bar.dart'
 import 'package:hackfinal/view/bottomnavigation/favorite.dart';
 import 'package:hackfinal/view/bottomnavigation/home.dart';
 import 'package:hackfinal/view/bottomnavigation/profilementor.dart';
+import 'package:hackfinal/view/bottomnavigation/profiles.dart';
 import 'package:hackfinal/view/bottomnavigation/videoscreen.dart';
 
 class bottomNavBar extends StatefulWidget {
@@ -85,7 +86,7 @@ class _bottomNavBarState extends State<bottomNavBar> {
       ),
       Container(
         alignment: Alignment.center,
-        child: ProfileMentor(),
+        child: MyProfile(),
       ),
     ];
     return IndexedStack(

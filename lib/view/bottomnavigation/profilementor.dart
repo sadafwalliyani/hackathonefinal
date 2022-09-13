@@ -160,34 +160,3 @@ class _ProfileMentorState extends State<ProfileMentor> {
     );
   }
 }
-              // SizedBox(height: 10,),
-                         
-              // Container(child: Image.asset('assests/mentor.PNG')),
-        //       Expanded(
-        //           child: Padding(
-        //         padding: const EdgeInsets.all(30.0),
-        //         child: Column(
-        //           children: [
-        //             Text(
-        //               "Hi My name is Azamat Baimatov, i work as a Senior UI/UX Designer in on of the biggest E-commerce in Indonesia, i Have more than 10 years of experience UI/UX Design in Startup & Corporate.First we’ll describe the brief & how to work with a UX persona.Then you’ll learn how to create simple wireframes.From there we’ll look at how to implement colours  images properly in your designs.You’ll learn the do’s & don’ts around choosing fonts for web & mobile apps.You’ll learn how to create your own icons, buttons & other UI components.",
-        //               textAlign: TextAlign.justify,
-        //               style: TextStyle(
-        //                 fontSize: 14,
-        //                 height: 1,
-        //               ),
-        //             ),
-        //             SizedBox(height: 3,),
-        //             UnorderedListItem(
-        //                 "First we’ll describe the brief & how to work with a UX persona."),
-        //             UnorderedListItem(
-        //                 "Then you’ll learn how to create simple wireframes."),
-        //             UnorderedListItem(
-        //                 "From there we’ll look at how to implement colours  images properly in your designs."),
-        //             UnorderedListItem(
-        //                 "You’ll learn the do’s & don’ts around choosing fonts for web & mobile apps."),
-        //             UnorderedListItem(
-        //                 "You’ll learn how to create your own icons, buttons & other UI components."),
-        //           ],
-        //         ),
-        //       ))
-

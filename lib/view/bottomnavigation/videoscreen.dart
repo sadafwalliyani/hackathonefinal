@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:hackfinal/view/Tabbar/tabar.dart';
 import 'package:hackfinal/view/lessons/videoListView.dart';
 import 'package:video_player/video_player.dart';
 
@@ -98,8 +99,11 @@ class _videoScreenState extends State<videoScreen> {
             ),
             SizedBox(height: 5,),
           
-       
-             Image.asset('assests/image1.PNG'),
+       Container(
+        width: 365,
+        height: 100,
+        child: CustomTabDemo()),
+            //  Image.asset('assests/image1.PNG'),
             Container(
               width: 370,
               child: Text('About Course',

@@ -54,23 +54,24 @@ class _ContinueLessonState extends State<ContinueLesson> {
                 SizedBox(
                   height: 10,
                 ),
-                Progress(Color.fromRGBO(46, 196, 182, 1),
-                    "Basic UI/UX Designer ", "by Azamat baimatov"),
-                SizedBox(
-                  height: 15,
-                ),
-                Progress(Colors.blueAccent, "React JS For Beginner",
-                    "by Micah Richard"),
-                SizedBox(
-                  height: 15,
-                ),
-                Progress(Colors.orangeAccent, "User Experience Design ...",
-                    "by Horann Tajman"),
-                SizedBox(
-                  height: 15,
-                ),
-                Progress(Colors.redAccent, "Illustrator 2022 MasterClass",
-                    "by Cherrie Maria")
+                
+                // Progress(Color.fromRGBO(46, 196, 182, 1),
+                //     "Basic UI/UX Designer ", "by Azamat baimatov"),
+                // SizedBox(
+                //   height: 15,
+                // ),
+                // Progress(Colors.blueAccent, "React JS For Beginner",
+                //     "by Micah Richard"),
+                // SizedBox(
+                //   height: 15,
+                // ),
+                // Progress(Colors.orangeAccent, "User Experience Design ...",
+                //     "by Horann Tajman"),
+                // SizedBox(
+                //   height: 15,
+                // ),
+                // Progress(Colors.redAccent, "Illustrator 2022 MasterClass",
+                //     "by Cherrie Maria")
               ],
             ),
           ),

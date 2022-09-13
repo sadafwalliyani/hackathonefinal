@@ -56,22 +56,22 @@ class _favoriteLessonState extends State<favoriteLesson> {
                   height: 10,
                 ),
                 Progress(Color.fromRGBO(46, 196, 182, 1),
-                    "Basic UI/UX Designer ", "by Azamat baimatov"),
+                    "Basic UI/UX Designer ", "by Azamat baimatov",context),
                 SizedBox(
                   height: 15,
                 ),
                 Progress(Colors.blueAccent, "React JS For Beginner",
-                    "by Micah Richard"),
+                    "by Micah Richard",context),
                 SizedBox(
                   height: 15,
                 ),
                 Progress(Colors.orangeAccent, "User Experience Design ...",
-                    "by Horann Tajman"),
+                    "by Horann Tajman",context),
                 SizedBox(
                   height: 15,
                 ),
                 Progress(Colors.redAccent, "Illustrator 2022 MasterClass",
-                    "by Cherrie Maria")
+                    "by Cherrie Maria,",context)
               ],
             ),
           ),

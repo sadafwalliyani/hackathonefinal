@@ -1,56 +1,119 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hackfinal/view/Tabbar/details.dart';
+import 'package:hackfinal/view/Tabbar/lessons.dart';
+import 'package:hackfinal/view/Tabbar/reviews.dart';
 
-class tabBar extends StatefulWidget {
-  const tabBar({super.key});
+class CustomTabDemo extends StatefulWidget {
+  const CustomTabDemo({Key? key}) : super(key: key);
 
   @override
-  State<tabBar> createState() => _tabBarState();
+  _CustomTabDemoState createState() => _CustomTabDemoState();
 }
 
-/// AnimationControllers can be created with `vsync: this` because of TickerProviderStateMixin.
-class _tabBarState extends State<tabBar>
-    with TickerProviderStateMixin {
+class _CustomTabDemoState extends State<CustomTabDemo>
+    with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
   @override
   void initState() {
-    super.initState();
     _tabController = TabController(length: 3, vsync: this);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _tabController.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('TabBar Widget'),
-        bottom: TabBar(
-          controller: _tabController,
-          tabs: const <Widget>[
-            Tab(
-              icon: Icon(Icons.cloud_outlined),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Container(
+              height: 45,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(
+                  5.0,
+                ),
+              ),
+              child: TabBar(
+                controller: _tabController,
+                indicatorColor: Colors.white,
+                indicatorWeight: 5,
+                labelPadding: EdgeInsets.zero,
+                labelColor: Colors.blue,
+                unselectedLabelColor: Colors.black,
+                tabs: [
+                  Tab(
+                    child: Container(
+                      child: const Text('Details'),
+                      alignment: Alignment.center,
+                      height: double.infinity,
+                      decoration: const BoxDecoration(
+                        color: Colors.cyan,
+                        border: Border(
+                          right: BorderSide(color: Colors.grey),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Tab(
+                    child: Container(
+                      child: const Text('Lessons'),
+                      alignment: Alignment.center,
+                      height: double.infinity,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        border: Border(
+                          right: BorderSide(color: Colors.grey),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Tab(
+                    child: Container(
+                      child: const Text('Reviews'),
+                      alignment: Alignment.center,
+                      height: double.infinity,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        border: Border(
+                          right: BorderSide(color: Color.fromARGB(255, 138, 136, 136)),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-            Tab(
-              icon: Icon(Icons.beach_access_sharp),
-            ),
-            Tab(
-              icon: Icon(Icons.brightness_5_sharp),
+
+            // tab bar view
+            Expanded(
+              child: TabBarView(
+                controller: _tabController,
+                children: const [
+                  Center(
+                    child:detailsScreen()
+                  ),
+
+                  // second tab bar view widget
+                  Center(
+                    child: lessonsScreen()
+                  ),
+                  Center(
+                    child: reviewsScreen()
+                  ),
+                ],
+              ),
             ),
           ],
         ),
-      ),
-      body: TabBarView(
-        controller: _tabController,
-        children: const <Widget>[
-          Center(
-            child: Text("It's cloudy here"),
-          ),
-          Center(
-            child: Text("It's rainy here"),
-          ),
-          Center(
-            child: Text("It's sunny here"),
-          ),
-        ],
       ),
     );
   }
