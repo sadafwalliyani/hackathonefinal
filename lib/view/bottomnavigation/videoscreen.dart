@@ -100,10 +100,10 @@ class _videoScreenState extends State<videoScreen> {
             SizedBox(height: 5,),
           
        Container(
-        width: 365,
+        width: MediaQuery.of(context).size.width,
         height: 100,
         child: CustomTabDemo()),
-            //  Image.asset('assests/image1.PNG'),
+             Image.asset('assests/image1.PNG'),
             Container(
               width: 370,
               child: Text('About Course',
@@ -124,14 +124,7 @@ class _videoScreenState extends State<videoScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
         
-        //  IconButton(onPressed: () {}, icon: Icon(Icons.add)),
-        //   Text('Add to Cart',
-        //             textAlign: TextAlign.left,
-        //             style: TextStyle(
-        //               fontSize: 20,
-        //               color: Color.fromRGBO(46, 196, 182, 1),
-        //             ),),
-              ElevatedButton(
+             ElevatedButton(
                         onPressed: () {
                           Navigator.push(
                             context,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hackfinal/view/widgets/profileswidget.dart';
 
 class MyProfile extends StatefulWidget {
   const MyProfile({Key? key}) : super(key: key);
@@ -18,8 +19,8 @@ class _MyProfileState extends State<MyProfile> {
           children: [
             Center(
               child: Container(
-                width: 380,
-                height: 235,
+                width: MediaQuery.of(context).size.width,
+                height: 255,
                 decoration: const BoxDecoration(
                     color: Color(0xff2EC4B6),
                     borderRadius: BorderRadius.only(
@@ -75,33 +76,34 @@ class _MyProfileState extends State<MyProfile> {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(20.0),
               child: Text(
                 "General",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
-            // ProfileWid(
-            //     "Personal Data",
-            //     const Icon(
-            //       Icons.person_outline,
-            //       color: Color(0xff2EC4B6),
-            //     )),
-            // ProfileWid("Payments",
-            //     const Icon(Icons.payment_outlined, color: Color(0xff2EC4B6))),
-            // ProfileWid("Reviews",
-            //     const Icon(Icons.reviews_outlined, color: Color(0xff2EC4B6))),
-            // ProfileWid(
-            //     "Certificate",
-            //     const Icon(Icons.cast_for_education_outlined,
-            //         color: Color(0xff2EC4B6))),
-            // const Padding(
-            //   padding: EdgeInsets.symmetric(horizontal: 15.0),
-            //   child:
-            //       Text("Others", style: TextStyle(fontWeight: FontWeight.bold)),
-            // ),
-            // ProfileWid("Logout",
-            //     const Icon(Icons.logout_outlined, color: Color(0xff2EC4B6)))
+            ProfileWidget(
+                "Personal Data",
+                const Icon(
+                  Icons.person_outline,
+                  color: Color(0xff2EC4B6),
+                )),
+            ProfileWidget("Payments",
+                const Icon(Icons.payment_outlined, color: Color(0xff2EC4B6))),
+            ProfileWidget("Reviews",
+                const Icon(Icons.reviews_outlined, color: Color(0xff2EC4B6))),
+            ProfileWidget(
+                "Certificate",
+                const Icon(Icons.cast_for_education_outlined,
+                    color: Color(0xff2EC4B6))),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15.0),
+              child:
+                  Text("Others", style: TextStyle(fontWeight: FontWeight.bold)),
+            ),
+            ProfileWidget("Setting",
+                const Icon(Icons.settings, color: Color(0xff2EC4B6),
+                ))
           ],
         ),
       ),

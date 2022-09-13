@@ -35,7 +35,8 @@ class _CustomTabDemoState extends State<CustomTabDemo>
         child: Column(
           children: [
             Container(
-              height: 45,
+              height: 50,
+              width: 380,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(
@@ -47,7 +48,7 @@ class _CustomTabDemoState extends State<CustomTabDemo>
                 indicatorColor: Colors.white,
                 indicatorWeight: 5,
                 labelPadding: EdgeInsets.zero,
-                labelColor: Colors.blue,
+                labelColor: Colors.cyan,
                 unselectedLabelColor: Colors.black,
                 tabs: [
                   Tab(
@@ -56,9 +57,9 @@ class _CustomTabDemoState extends State<CustomTabDemo>
                       alignment: Alignment.center,
                       height: double.infinity,
                       decoration: const BoxDecoration(
-                        color: Colors.cyan,
+                        color: Colors.white,
                         border: Border(
-                          right: BorderSide(color: Colors.grey),
+                          right: BorderSide(color: Colors.white),
                         ),
                       ),
                     ),
