@@ -8,7 +8,8 @@ class Listvieww extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
+      body: 
+      ListView.builder(
           itemCount: 10,
           itemBuilder: (context, index) {
             return Card(

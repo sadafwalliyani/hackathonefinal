@@ -1,9 +1,6 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hackfinal/view/bottomnavigation/bnbar.dart';
-import 'package:hackfinal/view/bottomnavigation/profilementor.dart';
-import 'package:hackfinal/view/bottomnavigation/profiles.dart';
-import 'package:hackfinal/view/lessons/videoListView.dart';
 import 'package:hackfinal/view/splashscreen.dart';
 import 'package:hackfinal/view/themedata/darktheme.dart';
 
@@ -19,15 +16,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        //theme: 
-        // ThemeData(
-        //   primaryColor: Colors.white,
-        //   textTheme: const TextTheme(
-        //     headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-        //     headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
-        //     bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
-        //   ),
-        // ),
          themeMode:ThemeMode.system,
      // theme: ThemeClass.lightTheme,
       darkTheme: ThemeClass.darkTheme,
@@ -37,7 +25,8 @@ class MyApp extends StatelessWidget {
             //bottomNavBar()
           // videoListView()
           //MyProfile()
-          
+   //VideoScreenApi()
+           
             );
   }
 }
