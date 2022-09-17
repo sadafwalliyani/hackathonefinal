@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hackfinal/models/model.dart';
 import 'package:hackfinal/services/coursesVideos.dart';
 import 'package:hackfinal/view/Tabbar/tabar.dart';
+import 'package:hackfinal/view/bottomnavigation/bnbar.dart';
 import 'package:hackfinal/view/bottomnavigation/profilementor.dart';
-import 'package:hackfinal/view/lessons/videoListView.dart';
 import 'package:video_player/video_player.dart';
 
 class VideoScreenApi extends StatefulWidget {
@@ -34,133 +34,6 @@ class _VideoScreenApiState extends State<VideoScreenApi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-//         appBar: AppBar(
-//           backgroundColor: Colors.white,
-//           leading: IconButton(
-//               onPressed: () {},
-//               icon: const Icon(
-//                 Icons.arrow_back,
-//                 color: Colors.black,
-//               )),
-//           actions: [
-//             IconButton(
-//                 onPressed: () {},
-//                 icon: const Icon(Icons.share_outlined, color: Colors.black)),
-//             IconButton(
-//                 onPressed: () {},
-//                 icon: const Icon(Icons.directions_boat_outlined,
-//                     color: Colors.black))
-//           ],
-//         ),
-//         body: SingleChildScrollView(
-//           child: Column(children: [
-//             Stack(
-//               children: [
-//                 _controller.value.isInitialized
-//                     ? AspectRatio(
-//                         aspectRatio: _controller.value.aspectRatio,
-//                         child: VideoPlayer(_controller),
-//                       )
-//                     : Container(),
-//                 Center(
-//                   child: Padding(
-//                     padding: const EdgeInsets.only(top: 70),
-//                     child: FloatingActionButton(
-//                       onPressed: () {
-//                         setState(() {
-//                           _controller.value.isPlaying
-//                               ? _controller.pause()
-//                               : _controller.play();
-//                         });
-//                       },
-//                       child: Icon(
-//                         _controller.value.isPlaying
-//                             ? Icons.pause
-//                             : Icons.play_arrow,
-//                       ),
-//                     ),
-//                   ),
-//                 ),
-//               ],
-//             ),
-//             const SizedBox(
-//               height: 5,
-//             ),
-//             Image.asset('assets/video.jpeg'),
-//             const Text(
-//               'About Course',
-//               textAlign: TextAlign.left,
-//               style: TextStyle(fontWeight: FontWeight.bold),
-//             ),
-//             const SizedBox(
-//               height: 8,
-//             ),
-//             Padding(
-//               padding: EdgeInsets.symmetric(horizontal: 15.0),
-//               child: Text(
-//                 widget.data!.description!,
-//                 maxLines: 4,
-//                 textAlign: TextAlign.justify,
-//               ),
-//             ),
-//             const SizedBox(
-//               height: 5,
-//             ),
-//             Row(
-//               mainAxisAlignment: MainAxisAlignment.spaceAround,
-//               children: [
-//                 Container(
-//                   width: 150,
-//                   height: 50,
-//                   child: Row(
-//                     children: const [
-//                       Icon(
-//                         Icons.shopping_bag_outlined,
-//                         color: Color(0xff2EC4B6),
-//                       ),
-//                       SizedBox(
-//                         width: 3,
-//                       ),
-//                       Text(
-//                         "Add to Cart",
-//                         style: TextStyle(color: Color(0xff2EC4B6)),
-//                       )
-//                     ],
-//                   ),
-//                 ),
-//                 ElevatedButton(
-//                   onPressed: () {
-//                     Navigator.push(
-//                       context,
-//                       MaterialPageRoute(
-//                           builder: (context) => const ProfileMentor()),
-//                     );
-//                   },
-//                   style: ElevatedButton.styleFrom(
-//                       primary: const Color(0xff2EC4B6),
-//                       shape: RoundedRectangleBorder(
-//                         borderRadius: BorderRadius.circular(20),
-//                       )),
-//                   child: const Text(
-//                     "Buy Now \$145",
-//                     style: TextStyle(
-//                         fontSize: 20,
-//                         color: Colors.white,
-//                         fontWeight: FontWeight.w400),
-//                   ),
-//                 ),
-//               ],
-//             )
-//           ]),
-//         ));
-//   }
-
-//   @override
-//   void dispose() {
-//     super.dispose();
-//     _controller.dispose();
-//   }
-// }
         appBar: AppBar(
           actions: <Widget>[
             IconButton(
@@ -195,7 +68,7 @@ class _VideoScreenApiState extends State<VideoScreenApi> {
                Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => PlayCourse()),
+                            builder: (context) => coursesVideos()),
                       );
               
             },
@@ -236,10 +109,10 @@ class _VideoScreenApiState extends State<VideoScreenApi> {
             SizedBox(
               height: 5,
             ),
-            Container(
-                width: MediaQuery.of(context).size.width,
-                height: 100,
-                child: CustomTabDemo()),
+            // Container(
+            //     width: MediaQuery.of(context).size.width,
+            //     height: 100,
+            //     child: CustomTabDemo()),
             Image.asset('assests/image1.PNG'),
             Container(
               width: 370,
@@ -272,7 +145,7 @@ class _VideoScreenApiState extends State<VideoScreenApi> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => videoListView()),
+                            builder: (context) => bottomNavBar()),
                       );
                     },
                     style: ElevatedButton.styleFrom(
@@ -296,7 +169,7 @@ class _VideoScreenApiState extends State<VideoScreenApi> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => videoListView()),
+                            builder: (context) => bottomNavBar()),
                       );
                     },
                     style: ElevatedButton.styleFrom(

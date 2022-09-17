@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hackfinal/view/bottomnavigation/favorite.dart';
 import 'package:hackfinal/view/splashscreen.dart';
 import 'package:hackfinal/view/themedata/darktheme.dart';
 
@@ -21,11 +22,14 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeClass.darkTheme,
         home:
             // DetailCourse()
-            SplashScreen()
+      SplashScreen()
             //bottomNavBar()
           // videoListView()
           //MyProfile()
    //VideoScreenApi()
+  
+    
+   
            
             );
   }

@@ -1,7 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hackfinal/view/Tabbar/tabar.dart';
+import 'package:hackfinal/view/bottomnavigation/bnbar.dart';
+import 'package:hackfinal/view/bottomnavigation/videoScreen.dart';
 import 'package:hackfinal/view/widgets/text.dart';
 //import 'package:flutter/src/widgets/container.dart';
 //import 'package:flutter/src/widgets/framework.dart';
@@ -30,7 +33,9 @@ class _ProfileMentorState extends State<ProfileMentor> {
               color: Colors.black,
             ),
             tooltip: 'Comment Icon',
-            onPressed: () {},
+            onPressed: () {
+             
+            },
           ),
           //IconButton
           //IconButton
@@ -43,8 +48,13 @@ class _ProfileMentorState extends State<ProfileMentor> {
             size: 30,
             color: Colors.black,
           ),
-          tooltip: 'Menu Icon',
-          onPressed: () {},
+         tooltip: 'Menu Icon',
+          onPressed: () {
+            //  Navigator.push(
+            //     context,
+            //     MaterialPageRoute(builder: (context) => VideoScreenApi()),
+            //   );
+          },
         ),
         //systemOverlayStyle: SystemUiOverlayStyle.light,
       ), //AppBar

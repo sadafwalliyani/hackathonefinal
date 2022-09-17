@@ -2,17 +2,17 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:hackfinal/models/model.dart';
-import 'package:hackfinal/view/lessons/continueyourlesson.dart';
+import 'package:hackfinal/view/bottomnavigation/videoScreen.dart';
 import 'package:http/http.dart' as http;
 
-class PlayCourse extends StatefulWidget {
-  const PlayCourse({Key? key}) : super(key: key);
+class coursesVideos extends StatefulWidget {
+  const coursesVideos({Key? key}) : super(key: key);
 
   @override
-  State<PlayCourse> createState() => _PlayCourseState();
+  State<coursesVideos> createState() => _coursesVideosState();
 }
 
-class _PlayCourseState extends State<PlayCourse> {
+class _coursesVideosState extends State<coursesVideos> {
   @override
   initState() {
     super.initState();
@@ -54,13 +54,17 @@ class _PlayCourseState extends State<PlayCourse> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (_) => DetailCourse(
+                                builder: (_) => VideoScreenApi(
                                       data: singleData,
                                     )));
                       },
                       leading: const Icon(Icons.play_arrow),
-                      title: Text(singleData.title!),
-                      subtitle: Text(singleData.description!),
+                      title: Text(singleData.title!),                      
+                      subtitle: Text(singleData.description!,
+                      maxLines: 10,
+                      style:TextStyle(fontSize: 10,
+                      ),
+                      textAlign: TextAlign.justify,),
                       trailing: const CircleAvatar(
                         radius: 20,
                         child: Icon(Icons.lock),

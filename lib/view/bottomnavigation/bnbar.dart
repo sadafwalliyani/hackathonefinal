@@ -78,7 +78,7 @@ class _bottomNavBarState extends State<bottomNavBar> {
       ),
       Container(
         alignment: Alignment.center,
-        child: PlayCourse(),
+        child: coursesVideos(),
       ),
       Container(
         alignment: Alignment.center,
