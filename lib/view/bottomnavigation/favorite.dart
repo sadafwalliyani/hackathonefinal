@@ -1,9 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-
-import '../progress.dart';
 import '../../services/variables/variable.dart';
+import '../widgets/progress.dart';
 
 
 class favoriteLesson extends StatefulWidget {
